@@ -44,4 +44,5 @@ if [ -s '/etc/init.d/plexmediaserver' ]; then
 fi
 
 # Download init.d script from GitHub master branch
-curl -o '/etc/init.d/plexmediaserver' 'https://raw.github.com/tripflex/iPlex/master/etc/init.d/plexmediaserver'
+sudo curl -o '/etc/init.d/plexmediaserver' 'https://raw.github.com/tripflex/iPlex/master/etc/init.d/plexmediaserver'
+sudo chmod +x /etc/init.d/plexmediaserver
