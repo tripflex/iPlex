@@ -29,3 +29,18 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 # ----------------------------------------------------------------------
 
+if [ "$#" -lt 1 ] || [ "$1" = "-h" ] || [ "$1" = "--help" ] || [[ $1 == -* ]]; then
+ 	echo "Usage: $0 plexmediaserver.deb" >&2
+ 	exit
+fi
+
+# Start install of Plex Media Server
+dpkg -i $1
+
+# Check if file exists already and has size greater than 0
+if [ -s '/etc/init.d/plexmediaserver' ]; then
+	mv /etc/init.d/plexmediaserver /etc/init.d/plexmediaserver.old
+fi
+
+# Download init.d script from GitHub master branch
+curl -o '/etc/init.d/plexmediaserver' 'https://raw.github.com/tripflex/iPlex/master/etc/init.d/plexmediaserver'

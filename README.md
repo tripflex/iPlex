@@ -1,15 +1,27 @@
-# Plex Media Server INIT Script
+	 d8b   8888888b. 888
+	 Y8P   888   Y88b888
+	       888    888888
+	 888   888   d88P888 .d88b. 888  888
+	 888   8888888P" 888d8P  Y8b`Y8bd8P' 
+	 888   888       88888888888  X88K 
+	 888   888       888Y8b.    .d8""8b. 
+	 888   888       888 "Y8888 888  888   
 
-This is the init script for Plex Media Server that should be located at /etc/init.d/plexmediaserver.   This is something I had to track down when setting up Plex Media Server with OpenMediaVault, as the default installer for PlexMediaServer seems to have a problem with creating the init script, so I had to manually add it.
+# iPlex - Plex Install Helper
+
+This is a bash/shell install helper script that will install the .deb file you provide the path to, and then update the init.d script.  I created this to use whenever installing or upgrading my OpenMediaVault server.  The normal Debian installer attempts to use upstart which ends up resulting in a blank plexmediaserver file in /etc/init.d.  I commonly install the latest beta releases and I may add functionality to this later to automatically check and download beta releases.
 
 ## Installation
 ``` bash
-wget https://raw.github.com/tripflex/plexmediaserver-init/master/plexmediaserver
-mv plexmediaserver /etc/init.d/plexmediaserver
-chmod +x /etc/init.d/plexmediaserver
+wget https://raw.github.com/tripflex/iPlex/master/iplex
+```
+## Usage
+Just feed iplex the path to the plexmediaserver deb file you downloaded from Plex.
+``` bash
+sh iplex plexmediaserver_0.9.9.9.deb
 ```
 
-## Usage
+## Init Script Usage
 Using this should be just the same as you normally do, but as example
 
 ``` bash
