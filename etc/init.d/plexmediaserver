@@ -1,4 +1,3 @@
-#!/bin/bash
 ### BEGIN INIT INFO
 # Provides:          plexmediaserver
 # Required-Start:    $remote_fs $syslog $all
@@ -59,5 +58,4 @@ case "$1" in
 	exit 1
 	;;
 esac
-
 exit 0
