@@ -46,3 +46,5 @@ fi
 # Download init.d script from GitHub master branch
 sudo curl -o '/etc/init.d/plexmediaserver' 'https://raw.github.com/tripflex/iPlex/master/etc/init.d/plexmediaserver'
 sudo chmod +x /etc/init.d/plexmediaserver
+/etc/init.d/plexmediaserver status
+echo "Complete, look above for Plex Status"
