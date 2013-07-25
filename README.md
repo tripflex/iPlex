@@ -19,7 +19,7 @@ chmod +x iplex
 ## Usage
 Just feed iplex the path to the plexmediaserver deb file you downloaded from Plex.
 ``` bash
-sh iplex plexmediaserver_0.9.9.9.deb
+./iplex plexmediaserver_0.9.9.9.deb
 ```
 
 ## Init Script Usage
